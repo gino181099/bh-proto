@@ -16,6 +16,7 @@
 
 </head>
 <body>
+    
   <nav class="navbar navbar-light bg-light navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -24,21 +25,57 @@
             <a class="navbar-brand mr-auto" href="./">DiamWatch</a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="./">
+                    <li class="nav-item active"><a class="nav-link" href="./">
                             Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./store.html">
                             Store</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="./contactus.html">
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html">
                             Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a id="loginBtn">
+                    <a id="loginBtn" data-toggle="modal" data-target="#modalLoginForm">
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
     </nav>
-  <div class="container">
+
+    <!--Modal-->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Log in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="email" id="defaultForm-email" class="form-control
+          validate" placeholder="Email">
+        </div>
+
+        <div class="md-form mb-4">
+          <input type="password" id="defaultForm-pass" class="form-control
+          validate" placeholder="Password">
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default">Login</button>
+      </div>
+      <div class="modal-footer d-flex justify-content-start">
+        <button class="btn btn-default facebook"><i class="fa fa-facebook"></i>  Sign in with Facebook</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--End-->
+
+    <div class="container">
     <form id="contact-form" role="form">
     <div class="controls">
 
@@ -125,7 +162,7 @@
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
           <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
+            <li class="mb-2"><a href="#" class="text-muted" data-toggle="modal" data-target="#modalLoginForm">Login</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-6 mb-lg-0">
