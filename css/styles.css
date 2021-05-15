@@ -11,6 +11,16 @@ body {
   padding: 50px 0px;
   border-bottom: 1px ridge;
   min-height: 400px; }
+#loginBtn{
+  cursor: pointer;
+}
+.modal-content{
+  border-radius: 20px;
+}  
+.facebook{
+  background: #3b5998;
+  color: white;
+}
 form{
   margin: 50px 0px;
 }
